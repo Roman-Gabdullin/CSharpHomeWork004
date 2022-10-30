@@ -10,7 +10,11 @@ Console.Write("Введите число B: ");
 int b = Convert.ToInt32(Console.ReadLine());
 void Exponentiation(int n1,int n2)
 {
-    int res = Convert.ToInt32(Math.Pow(n1,n2));
-    Console.Write ($"число {n1} возведенное в степень {n2}, равно {res}");
+    int expon = n1;
+    for (int i = 1; i < n2; i++)
+    {
+        expon = expon * n1;
+    }
+    Console.Write($"Число {n1}, возведенное в степень {n2} = {expon}");
 }
 Exponentiation(a,b);
